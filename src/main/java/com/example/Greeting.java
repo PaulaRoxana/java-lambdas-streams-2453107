@@ -4,5 +4,5 @@ package com.example;
 public interface Greeting {
 
   void sayHello();
-
+//void sayGoodbye();
 }
