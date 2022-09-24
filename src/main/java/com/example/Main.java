@@ -14,6 +14,7 @@ public class Main {
     Integer[] scores = new Integer[]{80, 66, 73, 92, 43};
     Stream<Integer> scoresStream = Arrays.stream(scores);
 
+
     List<String> shoppingList = new ArrayList<>();
     shoppingList.add("coffee");
     shoppingList.add("bread");
@@ -22,6 +23,8 @@ public class Main {
     shoppingList.add("pasta");
     Stream<String> shoppingListStream = shoppingList.stream();
     shoppingListStream.sorted()
+            .map(item ->item.toUpperCase())
+            .filter(item -> item.startsWith("P"))
             .forEach(item -> System.out.println(item));
 
   }
